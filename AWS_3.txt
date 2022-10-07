@@ -1,0 +1,32 @@
+18.193.114.22 public IPv4
+ec2-18-193-114-22.eu-central-1.compute.amazonaws.com
+
+ssh -i Paramiko.pem ubuntu@ec2-18-193-114-22.eu-central-1.compute.amazonaws.com
+ssh -i Paramiko.pem ubuntu@18.193.114.22
+
+ cat  ~/.ssh/known_hosts 
+
+
+ sudo apt update -- update the list of available packages
+
+ sudo apt upgrade -- upgrade the packages that need upgrade
+
+ sudo reboot -- reboot the system
+
+ cd ~ -- go home, return to the root of your home directory
+
+ cat .ssh/known_hosts  -- print your local list of known hosts
+
+ Because Paramiko uses SSH, it can also use SFTP protocol
+
+ FTP - File Transfer Protocol
+ It is absolutely OPEN
+
+ SFTP = Secure FTP uses SSH and port 22 by default
+
+ Instance restarted on September 9th
+ New addresses:
+ 3.68.88.209
+ ec2-3-68-88-209.eu-central-1.compute.amazonaws.com
+
+ ssh -i Paramiko.pem ubuntu@3.68.88.209
