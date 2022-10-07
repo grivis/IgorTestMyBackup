@@ -1,0 +1,102 @@
+WORKING WITH GITHUB
+
+To download the entire repository into a Linux directory, we use
+
+'git', a Linux program that should be available by default
+
+Like this:
+
+git clone https://github.com/AndrewCRMartin/biocomp2 AndrewMartin
+
+This will create a local folder named AndrewMartin
+
+drwxrwxr-x 6 ubuntu ubuntu 4096 Mar 24 08:03 AndrewMartin
+
+ubuntu@ip-172-31-24-168:~/AndrewMartin$ ls -l
+-rw-rw-r-- 1 ubuntu ubuntu 3182 Mar 24 08:03 README.md
+drwxrwxr-x 5 ubuntu ubuntu 4096 Mar 24 08:03 cgi-biocomp2
+-rwxrwxr-x 1 ubuntu ubuntu  280 Mar 24 08:03 config_bbk.sh
+-rwxrwxr-x 1 ubuntu ubuntu  226 Mar 24 08:03 config_bioinf.sh
+-rwxrwxr-x 1 ubuntu ubuntu  224 Mar 24 08:03 config_linux.sh
+drwxrwxr-x 3 ubuntu ubuntu 4096 Mar 24 08:03 createdb
+-rw-rw-r-- 1 ubuntu ubuntu   44 Mar 24 08:03 htaccess
+drwxrwxr-x 3 ubuntu ubuntu 4096 Mar 24 08:03 html
+-rwxrwxr-x 1 ubuntu ubuntu 1898 Mar 24 08:03 install.sh
+
+
+-------------------------------
+
+UPLOAD TO GITHUB
+
+If Git is not installed on your Linux
+
+sudo apt-get install git
+
+Configure GitHub
+
+git config --global user.name "user_name"
+git config --global user.email "email_id"
+
+You should have an account with GitHub
+
+Initialize a repository on your Linux machine
+
+git init SecondRepo
+
+This will create a directory.
+drwxrwxr-x 3 ubuntu ubuntu 4096 Mar 26 08:19 SecondRepo
+Then
+
+cd SecondRepo
+
+Create and or move files here, that you want to upload to GitHub
+
+git add .
+
+This will add all files and folders inside SecondRepo
+
+Commit (prepare) the upload
+
+git commit -m "This is my second commit"
+
+Create a repository on GitHub with the same name
+e.g. SecondRepo
+
+Add origin
+
+git remote add origin https://github.com/grivis/SecondRepo.git
+
+Push the files into GitHub
+
+git push https://*****************@github.com/grivis/SecondRepo.git
+
+********************** is your GitHub personal token
+You can get it if you have a GitHub account
+
+Settings --> Developer Settings --> Personal access tokens. 
+
+After 'push' your files should be there!!
+
+
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
+
+ADDING NEW AND EDITED FILES
+
+git add --all
+
+This will add new files and files changed since the last commit
+
+git status
+
+
+git commit -m '<commit_message>'
+
+git push https://****************q@github.com/grivis/SecondRepo.git
+
+You will see changes in your GitHub repository
+
+https://support.atlassian.com/bitbucket-cloud/docs/add-edit-and-commit-to-source-files/
+
+https://mirrors.edge.kernel.org/pub/software/scm/git/docs/
